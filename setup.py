@@ -1,9 +1,13 @@
 from setuptools import setup, find_packages
 
+with open('README.md', 'r', encoding='utf-8') as fh:
+    long_description = fh.read()
+
 setup(
-    name='Pysqlitecrypto-RSA',
-    version='0.1.0',
-    packages=find_packages(),
+    name='pysqlitecrypto-rsa',
+    version='0.0.1',
+    packages=find_packages(where='src'),
+    package_dir={'': 'src'},
     install_requires=[
         'rsa'
     ],
@@ -16,6 +20,8 @@ setup(
     author='hecdelatorre',
     author_email='hector982015@gmail.com',
     description='A package for RSA encryption and decryption using SQLite storage.',
+    long_description=long_description,
+    long_description_content_type='text/markdown',
     keywords='RSA encryption decryption SQLite cryptography',
     url='https://github.com/hecdelatorre/Pysqlitecrypto-RSA.git',
 )
